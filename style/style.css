@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  border: 1px solid white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px gray;
+  margin: 0.3rem 0;
+}
+.logo {
+  cursor: pointer;
+}
+.logo > h3:hover {
+  color: tomato;
+  opacity: 70%;
+}
+.bar {
+  width: 26px;
+  height: 3px;
+  margin: 3px 0;
+  background: #fff;
+  display: none; /*initialy set to none*/
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+.menu li a:hover {
+  opacity: 50%;
+  cursor: pointer;
+  border-bottom: 1px solid gray;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.intro-img {
+  max-width: 6rem;
+  max-height: 28rem;
+}
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  margin: 10px auto;
+  color: black;
+  border-radius: 8px;
+}
+.skill:nth-child(odd) {
+  background: teal;
+}
+.skill:nth-child(even) {
+  background: #fff;
+}
+
+.skill-two:nth-child(even) {
+  background-color: teal;
+}
+/* .project-showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project > img {
+
+  padding: 1rem;
+} */
+
+.project {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.project:hover {
+  /* animation: borderClr 1s forwards ease-in-out; */
+  box-shadow: 0px 0px 5px gray;
+}
+@keyframes borderClr {
+  0% {
+    border: 1px solid yellow;
+  }
+  25% {
+    border: 1px solid green;
+  }
+  50% {
+    border: 1px solid tomato;
+  }
+  100% {
+    border: 1px solid wheat;
+  }
+}
+.img {
+  display: block;
+  margin: 10px auto;
+  max-width: 15rem;
+  max-height: 15rem;
+}
+.live-btn {
+  display: block;
+  width: 40%;
+  margin: 10px auto;
+}
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    animation: navAnim 0.09s ease-in-out;
+    border: 1px solid white;
+    border-radius: 8px;
+    z-index: 10;
+    opacity: 95%;
+  }
+
+  .menu-toggle,
+  .bar {
+    display: block;
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .live-btn {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  .live-btn > a {
+    margin: 6px 0;
+  }
+  @keyframes navAnim {
+    0% {
+      top: 12px;
+    }
+    25% {
+      top: 24px;
+    }
+    75% {
+      top: 36px;
+    }
+    100% {
+      top: 50px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .custom-small-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
